@@ -1,0 +1,22 @@
+<h1><a>CUSIP Code Entry Form</a></h1>
+<form id="cusips_form" method="post" action="{% url 'add' %}">
+			<div class="form_description">
+	<h2>CUSIP Code Entry Form</h2>
+	{% csrf_token %}
+	<p>Save and check if bonds have are Municipal</p>
+</div>						
+	<ul >
+	
+			<li id="li_1" >
+<label class="description" for="element_1">Cusip Code(s) </label>
+<div>
+	<input id="csv" name="csv" type="text" maxlength="255" value=""/> 
+</div><p class="guidelines" id="guide_1"><small>Please enter a list of CUSIP codes seperated by commas i.e. "01609WAG7,791642AA9,48251W104,M78673114,130222102,92047W101"</small></p> 
+</li>
+	
+			<li class="buttons">
+		
+		<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+</li>
+	</ul>
+</form>	

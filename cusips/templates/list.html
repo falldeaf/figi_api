@@ -1,0 +1,6 @@
+<ul>
+	{% for bond in bonds %}
+		<li>{{ bond }}</li>
+		<label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
+	{% endfor %}
+</ul>

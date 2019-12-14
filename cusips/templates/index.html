@@ -1,0 +1,24 @@
+<h2> Egan-Jones MUNICIPAL CHALLENGE </h2>
+Code by <a href="https://tommardis.dev">Tom Mardis</a>
+
+<p>
+Enter CUSIP Codes to find out if they're Municipal <a href="{% url 'search' %}"> Search </a> <br />
+View added codes <a href="{% url 'get' 0 0 %}">All</a> | <a href="{% url 'get' 1 0 %}">Municipal Only</a>
+</p>
+
+<h2>API:</h2>
+<p>
+Add new codes -- <br />
+<b>url:</b> /add/<br />
+<b>request:</b> POST<br />
+<b>parameters:</b> {'csv': ' [csv string of CUSIP Codes] '}<br />
+</p>
+
+<p>
+View codes --<br />
+<b>url:</b> /get_bonds/:muni/:json<br />
+<b>request:</b> GET<br />
+<b>parameters:</b>
+muni [1] (limit to municipal only) [0] (list all)<br />
+json [1] (output in JSON format)   [0] (output in HTML)<br />
+</p>
